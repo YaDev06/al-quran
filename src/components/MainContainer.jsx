@@ -4,7 +4,7 @@ import { MainContext } from "../reducer/context";
 import Loader from "./Loader/Loader";
 
 const MainContainer = () => {
-  const {surah} = useContext(MainContext);
+  const { surah } = useContext(MainContext);
   let surahs = surah.sort(function (a, b) {
     return a.id - b.id;
   });
@@ -13,13 +13,14 @@ const MainContainer = () => {
   }
   return (
     <div className="content">
-      {surahs.length
-        ? surahs.map((surah) => {
-            return (
-              <div
-                className="card my-3"
+      {surahs.length ? (
+        surahs.map((surah) => {
+          return (
+            <>
+              <Link
+                className="card my-3 text-dark text-decoration-none"
                 style={{ width: "25rem", height: "13vh", cursor: "pointer" }}
-                onClick={() => <Link to={`/${surah.id}`} />}
+                to={`/${surah.id}`}
                 key={surah.id}
               >
                 <div className="card-body">
@@ -53,10 +54,13 @@ const MainContainer = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })
-        : <Loader />}
+              </Link>
+            </>
+          );
+        })
+      ) : (
+        <Loader />
+      )}
     </div>
   );
 };
