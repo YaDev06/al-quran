@@ -1,17 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Navbar = () => {
-  const [search, setSearch] = useState("");
-
-  const keyDown = (e) => {
-    if (e.key === "Enter") {
-      window.location.href = `/corpus/${search}`;
-    }
-  };
-
-  const handleChange = (e) => {
-    setSearch(e.target.value);
-  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-success py-2">

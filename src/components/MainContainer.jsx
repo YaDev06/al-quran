@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { MainContext } from "../reducer/context";
 import Loader from "./Loader/Loader";
 
@@ -18,9 +19,7 @@ const MainContainer = () => {
               <div
                 className="card my-3"
                 style={{ width: "25rem", height: "13vh", cursor: "pointer" }}
-                onClick={() => {
-                  window.location.href = `/${surah.id}`;
-                }}
+                onClick={() => <Link to={`/${surah.id}`} />}
                 key={surah.id}
               >
                 <div className="card-body">

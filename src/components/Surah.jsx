@@ -17,6 +17,7 @@ const Surah = () => {
   const goBack = () => {
     navigate(-1);
   };
+  
   return (
     <div className="content">
       <button

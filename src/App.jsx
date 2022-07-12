@@ -158,8 +158,8 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<MainContainer />} />
-        <Route path="/:id" element={<Surah />} />
+        <Route index path="/" element={<MainContainer />} />
+        <Route index path="/:id" element={<Surah />} />
       </Routes>
       <Footer />
     </>
