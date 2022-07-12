@@ -1,0 +1,6 @@
+.content{
+    min-height: 84.7vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
